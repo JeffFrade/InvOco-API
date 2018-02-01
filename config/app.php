@@ -175,13 +175,13 @@ return [
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
 
         /*
-         * Application Service Providers...
+         * Domains Service Providers...
          */
-        InvOcoAPI\Providers\AppServiceProvider::class,
-        InvOcoAPI\Providers\AuthServiceProvider::class,
-        // InvOcoAPI\Providers\BroadcastServiceProvider::class,
-        InvOcoAPI\Providers\EventServiceProvider::class,
-        InvOcoAPI\Providers\RouteServiceProvider::class,
+
+        /*
+         * Units Service Providers...
+         */
+        InvOcoAPI\Units\Authentication\Providers\UnitServiceProvider::class,
 
     ],
 

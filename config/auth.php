@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => InvOcoAPI\User::class,
+            'model' => InvOcoAPI\Repositories\Models\User::class,
         ],
 
         // 'users' => [
