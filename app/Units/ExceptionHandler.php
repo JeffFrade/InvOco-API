@@ -38,6 +38,18 @@ class ExceptionHandler extends Handler
     {
         parent::report($exception);
     }
+	
+	protected function convertExceptionToResponse(Exception $e)
+    {
+       $e = FlattenException::create($e);
+
+       $message = Response::$statusTexts[$e->getStatusCode()];
+       if (config('app.debug')) {
+           $message = $e->getMessage();
+       }
+
+       return \response()->json(['message' => $message], $e->getStatusCode());
+    }
 
     /**
      * Render an exception into an HTTP response.
